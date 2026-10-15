@@ -72,7 +72,7 @@ Choose the download that matches your assistant.
 
 [Official Claude setup guide](https://support.claude.com/en/articles/12512180-use-skills-in-claude)
 
-*The learning instructions use the Agent Skills format. These installation paths follow the platforms’ documentation; direct testing has been completed in ChatGPT, while Gemini and Claude imports have not yet been tested with this release. Menu labels and availability may vary by account.*
+*The learning instructions use the Agent Skills format. These installation paths follow the platforms’ documentation; BTAB imports in Gemini and Claude have not yet been independently verified. Menu labels and availability may vary by account.*
 
 ## Ask naturally
 
