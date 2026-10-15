@@ -11,7 +11,7 @@ Follow the mathematics, understand the theory, and learn from a complete solutio
 
 **[Get started with your assistant](#quick-start)**
 
-[Automatic skill selection](#one-skill-that-chooses-the-right-help) &nbsp; · &nbsp; [Explore the skills](#four-focused-teaching-modes) &nbsp; · &nbsp; [Download files](https://github.com/Omer-Bilitski/btab-learning/releases/tag/v1.2.0)
+[Automatic skill selection](#one-skill-that-chooses-the-right-help) &nbsp; · &nbsp; [Explore the skills](#four-focused-teaching-modes) &nbsp; · &nbsp; [Download files](https://github.com/Omer-Bilitski/btab-learning/releases/tag/v1.2.1)
 
 </div>
 
@@ -39,7 +39,7 @@ When a question needs both theory and calculations, BTAB Learning combines the r
 | **Check My Work** | Reviews your attempted solution, preserves valid methods and notation, and repairs the first substantive error. | “Check my solution without solving it again from scratch.” |
 | **Solve Then Explain** | Gives a complete written solution, followed by a walkthrough of that same solution. | “Solve this problem, then explain the method.” |
 
-**Only need Check My Work?** [Download the standalone skill](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.0/check-my-work-v1.2.0.zip).
+**Only need Check My Work?** [Download the standalone skill](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.1/check-my-work-v1.2.1.zip).
 
 ## Quick start
 
@@ -47,9 +47,9 @@ Choose the download that matches your assistant.
 
 | Your assistant | Download | What is included |
 | :--- | :--- | :--- |
-| **ChatGPT** | [ChatGPT plugin ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.0/btab-learning-v1.2.0.zip) | BTAB Learning plus the four specialized skills |
-| **Gemini** | [Standalone skill ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.0/btab-learning-skill-v1.2.0.zip) | BTAB Learning with all four teaching workflows |
-| **Claude** | [Standalone skill ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.0/btab-learning-skill-v1.2.0.zip) | BTAB Learning with all four teaching workflows |
+| **ChatGPT** | [ChatGPT plugin ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.1/btab-learning-v1.2.1.zip) | BTAB Learning plus the four specialized skills |
+| **Gemini** | [Standalone skill ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.1/btab-learning-skill-v1.2.1.zip) | BTAB Learning with all four teaching workflows |
+| **Claude** | [Standalone skill ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.1/btab-learning-skill-v1.2.1.zip) | BTAB Learning with all four teaching workflows |
 
 ### ChatGPT
 
@@ -97,12 +97,22 @@ Bring a question, equation, screenshot, or PDF excerpt that your assistant can r
 - **Follow-ups guide the depth.** Ask for a smaller step, another representation, or a simpler starting point.
 - **Use your preferred language.** English, Hebrew, or the language you normally learn in.
 
-<details>
-<summary>Optional improvement review</summary>
+## Learns how you like to learn
 
-Teaching works without additional services. Saving improvement suggestions across conversations or running weekly reviews requires a private journal and scheduling configured separately on each platform. Installing the skill does not automatically connect accounts or transfer conversations between assistants.
+Over time, BTAB Learning builds a personal picture of how you prefer explanations: detailed algebra or larger steps, intuition before formalism, concrete examples, familiar notation, language, and pace. It uses your requests and observable feedback, distinguishing explicit preferences from tentative patterns. Your current request always takes priority.
 
-</details>
+With a connected personal journal, concise observations can accumulate across conversations. Without one, adaptation is limited to the conversation context available to your assistant. Each learner's preferences stay personal; other users' conversations and preferences are not sent to the package author or shared with other learners.
+
+### A weekly review, with your approval
+
+Once a week, when a scheduler is configured, BTAB Learning reviews new observations and asks whether you want to add specific improvement points to your personal teaching guidance. For example:
+
+> “You have repeatedly asked to see substitutions before simplification. Add ‘Show substitutions explicitly before simplifying’ to my explanation preferences?”
+
+It presents the supporting evidence and exact proposed wording. You can approve, edit, or reject each point. Permanent changes require explicit approval; silence does not count as approval. Approved personal guidance is kept separately from the distributed skill so it can be preserved when the package is updated. One user's choices do not rewrite the public skill for everyone.
+
+**Setup matters:** installing the package does not create a private journal, connect accounts, or schedule messages. Persistent learning needs a configured writable personal journal whose protocol allows preference storage; proactive weekly questions also need an authorized scheduler on that platform. Without scheduling, a due review can be offered during your next active use if the previous review date is available. When there are no supported new points, it does not invent improvements or send an empty review.
+
 
 ---
 
