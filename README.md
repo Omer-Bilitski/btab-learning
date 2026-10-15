@@ -11,7 +11,7 @@ Follow the mathematics, understand the theory, and learn from a complete solutio
 
 **[Get started with your assistant](#quick-start)**
 
-[Automatic skill selection](#one-skill-that-chooses-the-right-help) &nbsp; · &nbsp; [Explore the skills](#four-focused-teaching-modes) &nbsp; · &nbsp; [Download files](https://github.com/Omer-Bilitski/btab-learning/releases/tag/v1.2.1)
+[Automatic skill selection](#one-skill-that-chooses-the-right-help) &nbsp; · &nbsp; [Explore the skills](#four-focused-teaching-modes) &nbsp; · &nbsp; [Download files](https://github.com/Omer-Bilitski/btab-learning/releases/tag/v1.2.2)
 
 </div>
 
@@ -39,7 +39,7 @@ When a question needs both theory and calculations, BTAB Learning combines the r
 | **Check My Work** | Reviews your attempted solution, preserves valid methods and notation, and repairs the first substantive error. | “Check my solution without solving it again from scratch.” |
 | **Solve Then Explain** | Gives a complete written solution, followed by a walkthrough of that same solution. | “Solve this problem, then explain the method.” |
 
-**Only need Check My Work?** [Download the standalone skill](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.1/check-my-work-v1.2.1.zip).
+**Only need Check My Work?** [Download the standalone skill](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.2/check-my-work-v1.2.2.zip).
 
 ## Quick start
 
@@ -47,9 +47,9 @@ Choose the download that matches your assistant.
 
 | Your assistant | Download | What is included |
 | :--- | :--- | :--- |
-| **ChatGPT** | [ChatGPT plugin ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.1/btab-learning-v1.2.1.zip) | BTAB Learning plus the four specialized skills |
-| **Gemini** | [Standalone skill ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.1/btab-learning-skill-v1.2.1.zip) | BTAB Learning with all four teaching workflows |
-| **Claude** | [Standalone skill ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.1/btab-learning-skill-v1.2.1.zip) | BTAB Learning with all four teaching workflows |
+| **ChatGPT** | [ChatGPT plugin ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.2/btab-learning-v1.2.2.zip) | BTAB Learning plus the four specialized skills |
+| **Gemini** | [Standalone skill ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.2/btab-learning-skill-v1.2.2.zip) | BTAB Learning with all four teaching workflows |
+| **Claude** | [Standalone skill ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.2/btab-learning-skill-v1.2.2.zip) | BTAB Learning with all four teaching workflows |
 
 ### ChatGPT
 
