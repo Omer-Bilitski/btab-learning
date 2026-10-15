@@ -11,7 +11,7 @@ Follow the mathematics, understand the theory, and learn from a complete solutio
 
 **[Get started with your assistant](#quick-start)**
 
-[Automatic skill selection](#one-skill-that-chooses-the-right-help) &nbsp; · &nbsp; [Explore the skills](#three-focused-teaching-modes) &nbsp; · &nbsp; [Download files](https://github.com/Omer-Bilitski/btab-learning/releases/tag/v1.1.0)
+[Automatic skill selection](#one-skill-that-chooses-the-right-help) &nbsp; · &nbsp; [Explore the skills](#four-focused-teaching-modes) &nbsp; · &nbsp; [Download files](https://github.com/Omer-Bilitski/btab-learning/releases/tag/v1.2.0)
 
 </div>
 
@@ -23,19 +23,23 @@ Follow the mathematics, understand the theory, and learn from a complete solutio
 
 - Missing a calculation? It expands the intermediate steps.
 - Missing a concept? It explains the underlying theory.
+- Want feedback on your attempt? It checks your method, locates the first substantive error, and explains a local correction.
 - Need a full worked solution? It solves the problem first, then explains the reasoning.
 
 When a question needs both theory and calculations, BTAB Learning combines the relevant modes. If you ask for hints or just one transition, it keeps the help within that scope.
 
-*Prefer direct control? The ChatGPT plugin also includes the three specialized skills separately.*
+*Prefer direct control? The ChatGPT plugin also includes the four specialized skills separately.*
 
-## Three focused teaching modes
+## Four focused teaching modes
 
-| **See the missing steps** | **Understand the theory** | **Solve, then understand** |
+| Skill | What it does | Example request |
 | :--- | :--- | :--- |
-| **Expand Math Steps** | **Explain Underlying Theory** | **Solve Then Explain** |
-| Follow the intermediate calculations between two lines of a proof or derivation. | Connect a difficult step to the definitions, assumptions, and principles behind it. | Read a complete written solution, followed by a walkthrough of that same solution. |
-| *“Show how equation 3 follows from equation 2.”* | *“Why is this theorem applicable here?”* | *“Solve this problem, then explain the method.”* |
+| **Expand Math Steps** | Reveals intermediate calculations between two lines. | “Show how equation 3 follows from equation 2.” |
+| **Explain Underlying Theory** | Connects a difficult step to its definitions, assumptions, and principles. | “Why is this theorem applicable here?” |
+| **Check My Work** | Reviews your attempted solution, preserves valid methods and notation, and repairs the first substantive error. | “Check my solution without solving it again from scratch.” |
+| **Solve Then Explain** | Gives a complete written solution, followed by a walkthrough of that same solution. | “Solve this problem, then explain the method.” |
+
+**Only need Check My Work?** [Download the standalone skill](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.0/check-my-work-v1.2.0.zip).
 
 ## Quick start
 
@@ -43,9 +47,9 @@ Choose the download that matches your assistant.
 
 | Your assistant | Download | What is included |
 | :--- | :--- | :--- |
-| **ChatGPT** | [ChatGPT plugin ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.1.0/btab-learning-v1.1.0.zip) | BTAB Learning plus the three specialized skills |
-| **Gemini** | [Standalone skill ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.1.0/btab-learning-skill-v1.1.0.zip) | BTAB Learning with all three teaching workflows |
-| **Claude** | [Standalone skill ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.1.0/btab-learning-skill-v1.1.0.zip) | BTAB Learning with all three teaching workflows |
+| **ChatGPT** | [ChatGPT plugin ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.0/btab-learning-v1.2.0.zip) | BTAB Learning plus the four specialized skills |
+| **Gemini** | [Standalone skill ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.0/btab-learning-skill-v1.2.0.zip) | BTAB Learning with all four teaching workflows |
+| **Claude** | [Standalone skill ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.0/btab-learning-skill-v1.2.0.zip) | BTAB Learning with all four teaching workflows |
 
 ### ChatGPT
 
@@ -58,7 +62,7 @@ Choose the download that matches your assistant.
 
 1. Download the **standalone skill ZIP** above and extract it.
 2. On [Gemini](https://gemini.google.com), open **Customize → Skills → Upload**.
-3. Select the extracted **btab-learning folder**, including its **SKILL.md** and **references** folder. Upload the whole folder so all three teaching workflows are included.
+3. Select the extracted **btab-learning folder**, including its **SKILL.md** and **references** folder. Upload the whole folder so all four teaching workflows are included.
 4. Review the skill, select **Create**, and enable it if prompted. Start a chat and use **BTAB Learning** with your question.
 
 *Gemini Skills currently require an eligible personal Google Account with Keep Activity enabled; availability may differ for work or school accounts.* [Official Gemini setup guide](https://support.google.com/gemini/answer/17094296?hl=en)
@@ -81,6 +85,8 @@ Bring a question, equation, screenshot, or PDF excerpt that your assistant can r
 > “I cannot follow the jump between these two equations.”
 
 > “Why do we introduce this function in the proof?”
+
+> “Check my attempt, keep my notation, and show the first step that needs fixing.”
 
 > “Give me a concise solution first, then teach me the reasoning.”
 
