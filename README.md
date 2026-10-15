@@ -1,25 +1,69 @@
+<div align="center">
+
+**MATHEMATICS · PHYSICS · UNDERSTANDING**
+
 # BTAB Learning
 
-[![Package downloads](https://img.shields.io/github/downloads/Omer-Bilitski/btab-learning/v1.0.1/btab-learning-v1.0.1.zip?label=ZIP%20downloads)](https://api.github.com/repos/Omer-Bilitski/btab-learning/releases/latest)
+### Make every step make sense.
 
-[להורדת BTAB Learning 1.0.1](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.0.1/btab-learning-v1.0.1.zip)
+Three teaching skills for ChatGPT that help you follow the mathematics,
+understand the theory, and learn from a complete solution.
 
-חבילה אחת עם שלושה סקילי למידה למתמטיקה ולפיזיקה:
+**[Download BTAB Learning](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.0.1/btab-learning-v1.0.1.zip)**
 
-- **Expand Math Steps** — הרחבת מעברים וחישובים שלא נכתבו.
-- **Explain Underlying Theory** — הסבר ההגדרות והתיאוריה שמאחורי צעד.
-- **Solve Then Explain** — פתרון מלא ולאחריו הסבר של אותו פתרון.
+[Quick start](#quick-start) &nbsp; · &nbsp; [Explore the skills](#three-skills-one-learning-workflow) &nbsp; · &nbsp; [Release notes](https://github.com/Omer-Bilitski/btab-learning/releases/latest)
 
-## התקנה ושימוש
+</div>
 
-ב-ChatGPT פתחו Plugins, בחרו Add ואז Upload plugin archive, העלו את קובץ ה-ZIP והתקינו את התוסף. לאחר ההתקנה בחרו את btab-learning בשיחה חדשה. זמינות בטלפון תלויה בתמיכת החשבון ובממשק התוספים במכשיר.
+---
 
-## שיפור ואישור
+## Three skills. One learning workflow.
 
-הסקילים מעריכים בשקט סימנים מהשיחה ומנסחים הצעות לשיפור. אין שאלוני משוב ואין שינוי הוראות בלי אישור מפורש. לשמירה בין שיחות ולסקירה שבועית צריך לחבר יומן פרטי ותזמון בחשבון המשתמש; הורדת ה-ZIP לבדה אינה מפעילה אותם. שיחות המשתמשים אינן מועברות למחבר החבילה.
+Choose the kind of help you need. Bring a question, an equation, a screenshot, or a PDF excerpt.
 
-## מונה הורדות
+| **See the missing steps** | **Understand the underlying theory** | **Solve, then understand** |
+| :--- | :--- | :--- |
+| **Expand Math Steps** | **Explain Underlying Theory** | **Solve Then Explain** |
+| Follow the intermediate calculations between two lines of a proof or derivation. | Connect a difficult step to the definitions, assumptions, and principles behind it. | Start with a complete written solution, then walk through the reasoning in the same order. |
+| *“Show how equation 3 follows from equation 2.”* | *“Why is this theorem applicable here?”* | *“Solve this problem, then explain the method.”* |
 
-התג למעלה מציג את מונה הורדות קובץ ה-ZIP מ-GitHub, עם השהיית מטמון אפשרית. לחיצה עליו פותחת את נתוני הגרסה; השדה download_count של קובץ ה-ZIP הוא המונה. הורדות חוזרות נספרות, ולכן זה אינו מספר משתמשים ייחודיים.
+## Quick start
 
-[עמוד הגרסה וקובץ בדיקת השלמות](https://github.com/Omer-Bilitski/btab-learning/releases/tag/v1.0.1)
+1. **[Download the package](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.0.1/btab-learning-v1.0.1.zip).** Keep the ZIP file as it is.
+2. In ChatGPT, open **Plugins → Add → Upload plugin archive** and select the ZIP.
+3. Open **btab-learning** and choose **Install plugin**.
+4. Start a new chat, select **btab-learning** from the **@** menu, and add your question or image.
+
+*Plugin availability and menu labels may vary by account and device.*
+
+## Ask naturally
+
+You do not need a special prompt. Tell ChatGPT where you are stuck and how much help you want.
+
+> **A skipped calculation**  
+> “Expand only the transition between these two lines. Keep the original notation.”
+
+> **A missing concept**  
+> “Explain what this definition means and why we need it in this proof.”
+
+> **A worked example**  
+> “Give me a concise solution first, then teach me the reasoning behind each major step.”
+
+## Built for understanding
+
+- **Your question sets the scope.** Focus on one transition, one concept, or a complete problem.
+- **Explanations stay connected to the mathematics.** Relevant assumptions, notation, and intermediate equations are made explicit.
+- **Follow-ups build on the explanation.** Ask for a smaller step, a different representation, or a simpler starting point.
+- **Use your preferred language.** Ask in English, Hebrew, or the language you normally learn in.
+
+---
+
+<div align="center">
+
+**Ready to work through your next question?**
+
+[Download BTAB Learning](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.0.1/btab-learning-v1.0.1.zip)
+
+<sub>Created by [Omer Bilitski](https://github.com/Omer-Bilitski)</sub>
+
+</div>
