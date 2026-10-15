@@ -1,8 +1,8 @@
 # BTAB Learning
 
-[![Package downloads](https://img.shields.io/github/downloads/hilikshmone/btab-learning/v1.0.0/btab-learning-v1.0.0.zip?label=ZIP%20downloads)](https://api.github.com/repos/hilikshmone/btab-learning/releases/latest)
+[![Package downloads](https://img.shields.io/github/downloads/Omer-Bilitski/btab-learning/v1.0.1/btab-learning-v1.0.1.zip?label=ZIP%20downloads)](https://api.github.com/repos/Omer-Bilitski/btab-learning/releases/latest)
 
-[להורדת BTAB Learning 1.0.0](https://github.com/hilikshmone/btab-learning/releases/download/v1.0.0/btab-learning-v1.0.0.zip)
+[להורדת BTAB Learning 1.0.1](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.0.1/btab-learning-v1.0.1.zip)
 
 חבילה אחת עם שלושה סקילי למידה למתמטיקה ולפיזיקה:
 
@@ -22,4 +22,4 @@
 
 התג למעלה מציג את מונה הורדות קובץ ה-ZIP מ-GitHub, עם השהיית מטמון אפשרית. לחיצה עליו פותחת את נתוני הגרסה; השדה download_count של קובץ ה-ZIP הוא המונה. הורדות חוזרות נספרות, ולכן זה אינו מספר משתמשים ייחודיים.
 
-[עמוד הגרסה וקובץ בדיקת השלמות](https://github.com/hilikshmone/btab-learning/releases/tag/v1.0.0)
+[עמוד הגרסה וקובץ בדיקת השלמות](https://github.com/Omer-Bilitski/btab-learning/releases/tag/v1.0.1)
