@@ -48,10 +48,15 @@ You do not need a self-improvement system. Omer reviews improvements centrally; 
 
 | Installation | How updates arrive |
 | --- | --- |
+| **Codex Git-backed marketplace** | Linked source; refresh with `codex plugin marketplace upgrade btab-learning-marketplace`, then reload the app. Automatic refresh depends on the client; it is not promised here. |
 | **Claude Code marketplace** | Automatic after you enable marketplace auto-update once. New sessions load the updated plugin. |
 | **ChatGPT personal plugin ZIP, including phone use** | Manual: download the latest plugin ZIP and upload the new version. A downloaded copy does not stay linked. |
 | **Gemini Skills** | Manual: download the latest standalone skill ZIP and replace your imported skill. |
 | **Claude web/mobile uploaded skill** | Manual: download the latest standalone skill ZIP and replace your imported skill. |
+
+### Codex: use the linked source
+
+Run `codex plugin marketplace add Omer-Bilitski/btab-learning --ref main`, then open the Plugins Directory and install **BTAB Learning** from that marketplace. To refresh later, run `codex plugin marketplace upgrade btab-learning-marketplace` and reload the app. This uses the same approved release channel.
 
 ### Claude Code: install once, receive future improvements
 

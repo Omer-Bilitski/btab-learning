@@ -1,5 +1,5 @@
 {
-  "schemaVersion": "1.0.0",
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "btab-learning",
   "version": "1.2.2",
   "description": "Mathematics and physics teaching skills",
