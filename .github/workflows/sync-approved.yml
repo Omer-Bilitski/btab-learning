@@ -55,10 +55,11 @@ jobs:
               path.write_text(json.dumps(value, indent=2) + '\n')
           manifest = {'name':'btab-learning','version':tag[1:],'description':'Mathematics and physics teaching skills','author':{'name':'Omer Bilitski'}}
           write_json(root / '.claude-plugin/plugin.json', manifest)
-          write_json(root / 'plugin.json', {'schemaVersion':'1.0.0', **manifest})
+          write_json(root / 'plugin.json', {'$schema':'https://agent-plugins.org/schemas/1.0.0/plugin.schema.json', **manifest})
           entry = {'name':'btab-learning','source':'./plugins/btab-learning','description':manifest['description']}
           catalog = {'name':'btab-learning-marketplace','owner':{'name':'Omer Bilitski'},'plugins':[entry]}
           write_json('.claude-plugin/marketplace.json', catalog)
+          write_json('.agents/plugins/marketplace.json', {'name':'btab-learning-marketplace','interface':{'displayName':'BTAB Learning'},'plugins':[{'name':'btab-learning','source':{'source':'local','path':'./plugins/btab-learning'},'policy':{'installation':'AVAILABLE','authentication':'ON_INSTALL'},'category':'Education'}]})
           write_json('approved-release.json', {'tag':tag,'release':release['html_url'],'asset':asset['name'],'sha256':hashlib.sha256(data).hexdigest()})
           readme = pathlib.Path('README.md')
           text = readme.read_text()
@@ -69,10 +70,15 @@ jobs:
 
           | Installation | How updates arrive |
           | --- | --- |
+          | **Codex Git-backed marketplace** | Linked source; refresh with `codex plugin marketplace upgrade btab-learning-marketplace`, then reload the app. Automatic refresh depends on the client; it is not promised here. |
           | **Claude Code marketplace** | Automatic after you enable marketplace auto-update once. New sessions load the updated plugin. |
           | **ChatGPT personal plugin ZIP, including phone use** | Manual: download the latest plugin ZIP and upload the new version. A downloaded copy does not stay linked. |
           | **Gemini Skills** | Manual: download the latest standalone skill ZIP and replace your imported skill. |
           | **Claude web/mobile uploaded skill** | Manual: download the latest standalone skill ZIP and replace your imported skill. |
+
+          ### Codex: use the linked source
+
+          Run `codex plugin marketplace add Omer-Bilitski/btab-learning --ref main`, then open the Plugins Directory and install **BTAB Learning** from that marketplace. To refresh later, run `codex plugin marketplace upgrade btab-learning-marketplace` and reload the app. This uses the same approved release channel.
 
           ### Claude Code: install once, receive future improvements
 
@@ -103,7 +109,7 @@ jobs:
           PY
       - name: Publish the approved distribution
         run: |
-          git add plugins/btab-learning .claude-plugin/marketplace.json approved-release.json README.md
+          git add plugins/btab-learning .claude-plugin/marketplace.json .agents/plugins/marketplace.json approved-release.json README.md
           if git diff --cached --quiet; then exit 0; fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
