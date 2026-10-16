@@ -41,6 +41,36 @@ When a question needs both theory and calculations, BTAB Learning combines the r
 
 **Only need Check My Work?** [Download the standalone skill](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.2/check-my-work-v1.2.2.zip).
 
+<!-- linked-distribution:start -->
+## Updates that follow the approved release
+
+You do not need a self-improvement system. Omer reviews improvements centrally; only published stable releases enter this distribution channel. Draft proposals and private learning journals are never imported.
+
+| Installation | How updates arrive |
+| --- | --- |
+| **Claude Code marketplace** | Automatic after you enable marketplace auto-update once. New sessions load the updated plugin. |
+| **ChatGPT personal plugin ZIP, including phone use** | Manual: download the latest plugin ZIP and upload the new version. A downloaded copy does not stay linked. |
+| **Gemini Skills** | Manual: download the latest standalone skill ZIP and replace your imported skill. |
+| **Claude web/mobile uploaded skill** | Manual: download the latest standalone skill ZIP and replace your imported skill. |
+
+### Claude Code: install once, receive future improvements
+
+Run these commands inside Claude Code:
+
+```text
+/plugin marketplace add Omer-Bilitski/btab-learning
+/plugin install btab-learning@btab-learning-marketplace
+```
+
+Then open `/plugin` → **Marketplaces** → **btab-learning-marketplace** → **Enable auto-update**. Third-party marketplace auto-update is off by default, so this one-time setting is required. No GitHub account or personal improvement journal is needed for the public plugin. Use `/btab-learning:btab-learning` for automatic teaching-mode selection.
+
+The catalog follows the latest published stable release, with an hourly sync as a fallback. GitHub scheduling may delay a sync. Already-running sessions may need a new session or `/reload-plugins`. Existing ZIP installations must be installed through the marketplace to become linked.
+
+[Latest downloads](https://github.com/Omer-Bilitski/btab-learning/releases/latest) · [Claude Code update instructions](https://code.claude.com/docs/en/discover-plugins)
+
+ChatGPT workspace marketplace synchronization requires an eligible workspace and administrator setup. It is not enabled by installing a personal ZIP. This repository does not claim automatic updates for personal ChatGPT, Gemini, or manually uploaded Claude skills. Marketplace files and release synchronization are automated; a live Claude Code installation has not been tested here.
+<!-- linked-distribution:end -->
+
 ## Quick start
 
 Choose the download that matches your assistant.

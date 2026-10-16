@@ -1,0 +1,13 @@
+{
+  "name": "btab-learning-marketplace",
+  "owner": {
+    "name": "Omer Bilitski"
+  },
+  "plugins": [
+    {
+      "name": "btab-learning",
+      "source": "./plugins/btab-learning",
+      "description": "Mathematics and physics teaching skills"
+    }
+  ]
+}
