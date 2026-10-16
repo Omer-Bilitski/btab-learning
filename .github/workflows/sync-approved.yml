@@ -1,0 +1,111 @@
+name: Sync approved BTAB distribution
+on:
+  workflow_dispatch:
+  release:
+    types: [published]
+  schedule:
+    - cron: '17 * * * *'
+  push:
+    paths: ['.github/workflows/sync-approved.yml']
+permissions:
+  contents: write
+concurrency:
+  group: btab-approved-distribution
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Import only the latest published stable release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh api "repos/$GH_REPO/releases/latest" > /tmp/btab-release.json
+          python3 - <<'PY'
+          import json, pathlib, re, subprocess, zipfile, io, hashlib, shutil
+          release = json.loads(pathlib.Path('/tmp/btab-release.json').read_text())
+          assert not release['draft'] and not release['prerelease']
+          tag = release['tag_name']
+          assert re.fullmatch(r'v\d+\.\d+\.\d+', tag), 'Stable semver required'
+          asset = next(a for a in release['assets'] if a['name'] == f'btab-learning-{tag}.zip')
+          data = subprocess.check_output(['gh','api','-H','Accept: application/octet-stream',f'repos/{release["url"].split("/repos/")[1].split("/releases/")[0]}/releases/assets/{asset["id"]}'])
+          archive = zipfile.ZipFile(io.BytesIO(data))
+          assert archive.testzip() is None
+          files = {}
+          for item in archive.infolist():
+              parts = pathlib.PurePosixPath(item.filename).parts
+              assert not item.filename.startswith('/') and '..' not in parts and '\\' not in item.filename
+              assert item.file_size < 2000000 and (item.external_attr >> 16) & 0o170000 != 0o120000
+              if item.is_dir(): continue
+              if parts[0] == 'btab-learning': parts = parts[1:]
+              if parts and parts[0] == 'skills': files['/'.join(parts)] = archive.read(item)
+          assert 'skills/btab-learning/SKILL.md' in files
+          assert sum(map(len, files.values())) < 10000000
+          root = pathlib.Path('plugins/btab-learning')
+          if root.exists(): shutil.rmtree(root)
+          for name, content in files.items():
+              target = root / name
+              target.parent.mkdir(parents=True, exist_ok=True)
+              target.write_bytes(content)
+          def write_json(path, value):
+              path = pathlib.Path(path)
+              path.parent.mkdir(parents=True, exist_ok=True)
+              path.write_text(json.dumps(value, indent=2) + '\n')
+          manifest = {'name':'btab-learning','version':tag[1:],'description':'Mathematics and physics teaching skills','author':{'name':'Omer Bilitski'}}
+          write_json(root / '.claude-plugin/plugin.json', manifest)
+          write_json(root / 'plugin.json', {'schemaVersion':'1.0.0', **manifest})
+          entry = {'name':'btab-learning','source':'./plugins/btab-learning','description':manifest['description']}
+          catalog = {'name':'btab-learning-marketplace','owner':{'name':'Omer Bilitski'},'plugins':[entry]}
+          write_json('.claude-plugin/marketplace.json', catalog)
+          write_json('approved-release.json', {'tag':tag,'release':release['html_url'],'asset':asset['name'],'sha256':hashlib.sha256(data).hexdigest()})
+          readme = pathlib.Path('README.md')
+          text = readme.read_text()
+          section = '''<!-- linked-distribution:start -->
+          ## Updates that follow the approved release
+
+          You do not need a self-improvement system. Omer reviews improvements centrally; only published stable releases enter this distribution channel. Draft proposals and private learning journals are never imported.
+
+          | Installation | How updates arrive |
+          | --- | --- |
+          | **Claude Code marketplace** | Automatic after you enable marketplace auto-update once. New sessions load the updated plugin. |
+          | **ChatGPT personal plugin ZIP, including phone use** | Manual: download the latest plugin ZIP and upload the new version. A downloaded copy does not stay linked. |
+          | **Gemini Skills** | Manual: download the latest standalone skill ZIP and replace your imported skill. |
+          | **Claude web/mobile uploaded skill** | Manual: download the latest standalone skill ZIP and replace your imported skill. |
+
+          ### Claude Code: install once, receive future improvements
+
+          Run these commands inside Claude Code:
+
+          ```text
+          /plugin marketplace add Omer-Bilitski/btab-learning
+          /plugin install btab-learning@btab-learning-marketplace
+          ```
+
+          Then open `/plugin` → **Marketplaces** → **btab-learning-marketplace** → **Enable auto-update**. Third-party marketplace auto-update is off by default, so this one-time setting is required. No GitHub account or personal improvement journal is needed for the public plugin. Use `/btab-learning:btab-learning` for automatic teaching-mode selection.
+
+          The catalog follows the latest published stable release, with an hourly sync as a fallback. GitHub scheduling may delay a sync. Already-running sessions may need a new session or `/reload-plugins`. Existing ZIP installations must be installed through the marketplace to become linked.
+
+          [Latest downloads](https://github.com/Omer-Bilitski/btab-learning/releases/latest) · [Claude Code update instructions](https://code.claude.com/docs/en/discover-plugins)
+
+          ChatGPT workspace marketplace synchronization requires an eligible workspace and administrator setup. It is not enabled by installing a personal ZIP. This repository does not claim automatic updates for personal ChatGPT, Gemini, or manually uploaded Claude skills. Marketplace files and release synchronization are automated; a live Claude Code installation has not been tested here.
+          <!-- linked-distribution:end -->
+
+          '''
+          if '<!-- linked-distribution:start -->' in text:
+              text = re.sub(r'<!-- linked-distribution:start -->.*?<!-- linked-distribution:end -->\n*', lambda m: section, text, flags=re.S)
+          else:
+              assert '## Quick start' in text
+              text = text.replace('## Quick start', section + '## Quick start', 1)
+          readme.write_text(text)
+          print(f'Validated {len(files)} skill files from {tag}; generated marketplace and update instructions.')
+          PY
+      - name: Publish the approved distribution
+        run: |
+          git add plugins/btab-learning .claude-plugin/marketplace.json approved-release.json README.md
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Sync marketplace to published stable BTAB release'
+          git push
