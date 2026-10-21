@@ -1,6 +1,6 @@
 ---
 name: btab-learning
-description: Teach mathematics and physics by selecting the appropriate help from the learner's request: expand skipped calculations, explain underlying theory, check the learner's attempted solution, or solve a problem and then explain it. Use for BTAB Learning requests and mathematical or physics questions that need one or more of these teaching modes. Respect requests for hints only or no solution.
+description: 'Teach mathematics and physics by selecting the appropriate help from the learner''s request: expand skipped calculations, explain underlying theory, check the learner''s attempted solution, or solve a problem and then explain it. Use for BTAB Learning requests and mathematical or physics questions that need one or more of these teaching modes. Respect requests for hints only or no solution.'
 ---
 
 # BTAB Learning
@@ -27,10 +27,15 @@ If a host cannot open the linked references, explain that the reference files mu
 
 ## Improvements and persistence
 
-Skill import does not create shared memory, connect accounts, or schedule tasks. Teaching uses the supplied conversation and files. A separately configured personal review task may assess accessible conversations; this teaching skill does not collect or transmit observations. Do not modify skill instructions unless the user requests a change.
+Follow the personal review instructions in the selected reference when a connected writable journal is configured. Do not ask ratings or surveys. Address confusion now, but never edit or revert skill instructions without explicit approval of the exact change.
 
-## Personal explanation preferences
+Skill import does not create shared memory, connect accounts, schedule a task, or transfer another platform's conversations. If a journal or scheduler is unavailable on this host, use current conversation evidence only and do not claim cross-chat collection or automatic weekly review. Do not send other users' conversations to the author.
+## Personal explanation preferences and weekly proposals
 
-Adapt the current explanation to explicit preferences and available evidence about detail, intermediate algebra, intuition, examples, notation, language, and pace. Distinguish stated preferences from tentative patterns; one difficulty or silence does not establish a lasting preference or ability. Follow the current request when it differs from earlier preferences. Personal preferences belong to this learner and must not become defaults for other users.
+Over time, build a user-specific picture of how this learner prefers explanations: level of detail, intermediate algebra, intuition before formalism, examples, notation, language, and pace. Distinguish explicit preferences from tentative patterns in repeated feedback; do not infer a lasting preference or ability from one difficulty or from silence. Follow the current request when it differs from an earlier preference. Adapt the current explanation using available evidence.
 
-Cross-chat persistence and weekly improvement proposals belong to the user's separately configured review task. This teaching skill uses available conversation evidence and does not write observations to external services or create scheduled tasks. Approved personal guidance should remain separate from distributed teaching instructions. Never claim proactive reviews or durable memory when those services are unavailable.
+With a configured personal journal whose protocol authorizes preference storage, retain concise preference observations, supporting evidence, confidence, and the user's approvals or corrections. Keep tentative observations separate from approved standing instructions. Store approved personal teaching guidance separately from the distributed skill files so package updates can preserve it. Never promote one user's preferences into defaults for other users.
+
+Once per week, through an authorized configured scheduler, review new observations and ask the user whether to add the proposed improvement points to their personal teaching guidance. Show a short list of concrete points, the evidence for each, and the exact proposed wording; allow approval, editing, or rejection of individual points. This weekly approval question is distinct from a rating or survey. Apply only explicitly approved points; silence is not approval. Track the review date and decisions to avoid duplicate prompts across teaching modes. If there are no supported new points, do not invent improvements or send an empty review.
+
+Downloading this skill alone does not provision memory or a scheduler. Without durable storage, use only available conversation evidence. Without a configured scheduler, offer a due review during the next active use when a prior review date is available; do not claim a proactive weekly message or create an automation without a setup request. The weekly review may be requested earlier by the user.

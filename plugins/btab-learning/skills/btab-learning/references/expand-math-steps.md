@@ -1,6 +1,6 @@
 ---
 name: expand-math-steps
-description: Expand skipped mathematical calculations between lines of a proof or derivation supplied as an image, screenshot, PDF excerpt, or equations. Use when the user requests intermediate lines, asks how one equation follows from another, or wants implicit differentiation, algebra, vector identities, or substitutions made explicit. Preserve the original argument; do not solve beyond the requested transition or replace it with a different proof.
+description: 'Expand skipped mathematical calculations between lines of a proof or derivation supplied as an image, screenshot, PDF excerpt, or equations. Use when the user requests intermediate lines, asks how one equation follows from another, or wants implicit differentiation, algebra, vector identities, or substitutions made explicit. Preserve the original argument; do not solve beyond the requested transition or replace it with a different proof.'
 ---
 
 # Expand Math Steps
@@ -80,8 +80,23 @@ then insert the source's expression for each force without changing its indices 
 \(\sum_i\tfrac12\dot m_i\lVert\mathbf v_i\rVert^2\)
 and do not use the constant-mass simplification silently.
 
-## Personal explanation preferences
+## Conversation-based improvement review
 
-Adapt the current explanation to explicit preferences and available evidence about detail, intermediate algebra, intuition, examples, notation, language, and pace. Distinguish stated preferences from tentative patterns; one difficulty or silence does not establish a lasting preference or ability. Follow the current request when it differs from earlier preferences. Personal preferences belong to this learner and must not become defaults for other users.
+After teaching responses and follow-ups, silently assess observable evidence. Do not request ratings, surveys or routine confirmation of understanding. Address confusion in the current response. Distinguish unresolved explanations from new curiosity; silence does not prove understanding.
 
-Cross-chat persistence and weekly improvement proposals belong to the user's separately configured review task. This teaching skill uses available conversation evidence and does not write observations to external services or create scheduled tasks. Approved personal guidance should remain separate from distributed teaching instructions. Never claim proactive reviews or durable memory when those services are unavailable.
+Keep teaching instructions unchanged until the owner explicitly approves an exact proposed edit during a weekly review or requests review earlier.
+
+When GitHub tools are available, get the authenticated login and look for that account's private repository named btab-private-review. Treat it as configured only if config.json names this same owner and skill, and PROTOCOL.md authorizes personal collection. Read both before writing. Never use another account's journal. Record a concise observation there: skill name, package version 1.2.1, stable conversation/turn key when available, topic, observed evidence, outcome (unknown/unresolved/partial/supported), and optional exact English proposed instruction with rationale. Record unknown outcomes as well as difficulties. Do not store full transcripts, images, sensitive facts or internal reasoning. Never send another user's conversations to the package author.
+
+Without a connected writable journal, use available conversation context only and do not claim durable storage, scheduled execution or cross-chat coverage. When relevant, disclose that limitation briefly. Downloading this package does not configure a journal or weekly scheduler.
+
+At an authorized weekly review, deduplicate by exchange and issue, show exact current/proposed wording and evidence, and request approval without applying edits. Track explicit decisions. After approved application, preserve prior text, version identifiers and application date. Compare similar observed exchanges in the following week; report tentative improvement, tentative regression, mixed, or insufficient evidence. Never infer success from silence or revert without approval.
+## Personal explanation preferences and weekly proposals
+
+Over time, build a user-specific picture of how this learner prefers explanations: level of detail, intermediate algebra, intuition before formalism, examples, notation, language, and pace. Distinguish explicit preferences from tentative patterns in repeated feedback; do not infer a lasting preference or ability from one difficulty or from silence. Follow the current request when it differs from an earlier preference. Adapt the current explanation using available evidence.
+
+With a configured personal journal whose protocol authorizes preference storage, retain concise preference observations, supporting evidence, confidence, and the user's approvals or corrections. Keep tentative observations separate from approved standing instructions. Store approved personal teaching guidance separately from the distributed skill files so package updates can preserve it. Never promote one user's preferences into defaults for other users.
+
+Once per week, through an authorized configured scheduler, review new observations and ask the user whether to add the proposed improvement points to their personal teaching guidance. Show a short list of concrete points, the evidence for each, and the exact proposed wording; allow approval, editing, or rejection of individual points. This weekly approval question is distinct from a rating or survey. Apply only explicitly approved points; silence is not approval. Track the review date and decisions to avoid duplicate prompts across teaching modes. If there are no supported new points, do not invent improvements or send an empty review.
+
+Downloading this skill alone does not provision memory or a scheduler. Without durable storage, use only available conversation evidence. Without a configured scheduler, offer a due review during the next active use when a prior review date is available; do not claim a proactive weekly message or create an automation without a setup request. The weekly review may be requested earlier by the user.
