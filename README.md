@@ -39,6 +39,8 @@ When a question needs both theory and calculations, BTAB Learning combines the r
 | **Check My Work** | Reviews your attempted solution, preserves valid methods and notation, and repairs the first substantive error. | “Check my solution without solving it again from scratch.” |
 | **Solve Then Explain** | Gives a complete written solution, followed by a walkthrough of that same solution. | “Solve this problem, then explain the method.” |
 
+**Source update:** Check My Work now adds red annotations to photographed or scanned attempts alongside written feedback, when image editing is available. It preserves the original handwriting and labels corrections that depend on assumptions. This update is in the repository source; the v1.2.2 download archives and release-linked marketplace do not yet include it.
+
 **Only need Check My Work?** [Download the standalone skill](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.2/check-my-work-v1.2.2.zip).
 
 <!-- linked-distribution:start -->
