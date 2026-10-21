@@ -1,6 +1,6 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "btab-learning",
-  "version": "1.2.1",
+  "version": "1.2.3",
   "description": "An automatic mathematics and physics learning guide with four focused teaching skills, including Check My Work."
 }
