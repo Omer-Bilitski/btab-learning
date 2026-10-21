@@ -1,0 +1,27 @@
+name: Publish owner-approved BTAB Learning 1.2.4
+on:
+  workflow_dispatch:
+  push:
+    paths: ['.github/workflows/release-approved-1.2.4.yml']
+permissions:
+  contents: write
+concurrency:
+  group: btab-approved-release-1.2.4
+  cancel-in-progress: false
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate and package the approved changes
+        run: python3 scripts/build-approved-1.2.4.py dist
+      - name: Publish stable release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          if gh release view v1.2.4 >/dev/null 2>&1; then
+            echo 'Release already exists; preserving published files.'
+            exit 0
+          fi
+          gh release create v1.2.4 dist/btab-learning-v1.2.4.zip dist/btab-learning-skill-v1.2.4.zip dist/check-my-work-v1.2.4.zip dist/SHA256SUMS.txt --target "$GITHUB_SHA" --title 'BTAB Learning 1.2.4 — Approved maintenance fixes' --notes 'Aligns router and standalone Check My Work persistence policy, reads observation versions from the accessible manifest or records unknown, and prefers additive annotation layers with labels independent of color. Red annotations remain the default. Full solutions, explanation formats, practice behavior and learning assessment behavior are unchanged. Only owner-approved proposals 1, 2 and 5 are applied.'

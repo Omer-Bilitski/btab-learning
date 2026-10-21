@@ -11,7 +11,7 @@ Follow the mathematics, understand the theory, and learn from a complete solutio
 
 **[Get started with your assistant](#quick-start)**
 
-[Automatic skill selection](#one-skill-that-chooses-the-right-help) &nbsp; · &nbsp; [Explore the skills](#four-focused-teaching-modes) &nbsp; · &nbsp; [Download files](https://github.com/Omer-Bilitski/btab-learning/releases/tag/v1.2.3)
+[Automatic skill selection](#one-skill-that-chooses-the-right-help) &nbsp; · &nbsp; [Explore the skills](#four-focused-teaching-modes) &nbsp; · &nbsp; [Download files](https://github.com/Omer-Bilitski/btab-learning/releases/tag/v1.2.4)
 
 </div>
 
@@ -39,9 +39,11 @@ When a question needs both theory and calculations, BTAB Learning combines the r
 | **Check My Work** | Reviews your attempted solution, preserves valid methods and notation, and repairs the first substantive error. | “Check my solution without solving it again from scratch.” |
 | **Solve Then Explain** | Gives a complete written solution, followed by a walkthrough of that same solution. | “Solve this problem, then explain the method.” |
 
+**New in v1.2.4:** Aligns Check My Work router and standalone persistence rules, reads review version identifiers from the package manifest instead of a stale hard-coded version, and prefers additive, color-independent annotation labels. Full-solution delivery and practice behavior are unchanged.
+
 **New in v1.2.3:** Check My Work now adds red annotations to photographed or scanned attempts alongside written feedback, when image editing is available. It preserves the original handwriting and labels corrections that depend on assumptions. All three v1.2.3 download archives include this update; the linked marketplace follows the published release.
 
-**Only need Check My Work?** [Download the standalone skill](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.3/check-my-work-v1.2.3.zip).
+**Only need Check My Work?** [Download the standalone skill](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.4/check-my-work-v1.2.4.zip).
 
 <!-- linked-distribution:start -->
 ## Updates that follow the approved release
@@ -84,9 +86,9 @@ Choose the download that matches your assistant.
 
 | Your assistant | Download | What is included |
 | :--- | :--- | :--- |
-| **ChatGPT** | [ChatGPT plugin ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.3/btab-learning-v1.2.3.zip) | BTAB Learning plus the four specialized skills |
-| **Gemini** | [Standalone skill ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.3/btab-learning-skill-v1.2.3.zip) | BTAB Learning with all four teaching workflows |
-| **Claude** | [Standalone skill ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.3/btab-learning-skill-v1.2.3.zip) | BTAB Learning with all four teaching workflows |
+| **ChatGPT** | [ChatGPT plugin ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.4/btab-learning-v1.2.4.zip) | BTAB Learning plus the four specialized skills |
+| **Gemini** | [Standalone skill ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.4/btab-learning-skill-v1.2.4.zip) | BTAB Learning with all four teaching workflows |
+| **Claude** | [Standalone skill ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.4/btab-learning-skill-v1.2.4.zip) | BTAB Learning with all four teaching workflows |
 
 ### ChatGPT
 
