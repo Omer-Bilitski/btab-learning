@@ -42,6 +42,9 @@ jobs:
               if parts[0] == 'btab-learning': parts = parts[1:]
               if parts and parts[0] == 'skills': files['/'.join(parts)] = archive.read(item)
           assert 'skills/btab-learning/SKILL.md' in files
+          if tuple(map(int, tag[1:].split('.'))) >= (1, 2, 3):
+              for name in ('skills/check-my-work/SKILL.md', 'skills/btab-learning/references/check-my-work.md'):
+                  assert b'## Annotate the submitted work' in files[name], 'Missing approved red annotation instructions'
           assert sum(map(len, files.values())) < 10000000
           root = pathlib.Path('plugins/btab-learning')
           if root.exists(): shutil.rmtree(root)
