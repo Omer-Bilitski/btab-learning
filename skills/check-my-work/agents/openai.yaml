@@ -1,4 +1,4 @@
 interface:
   display_name: "Check My Work"
-  short_description: "Check your math or physics attempt and repair the first error"
-  default_prompt: "Use $check-my-work to check my solution, preserve my approach, and explain the first error and its local correction."
+  short_description: "Check math or physics work with written feedback and red annotations"
+  default_prompt: "Use $check-my-work to check my solution, preserve my approach, and explain the first error and its local correction. For an uploaded image, also return a copy with red annotations alongside the written explanation."
