@@ -25,6 +25,18 @@ If the approach is correct, say what supports it and give an appropriate consist
 
 Respect the requested amount of help. For hints only, identify the relevant line and give a hint without displaying the correction. For a specified section, review that section and prerequisites needed to assess it. Continue the derivation or give a full corrected solution only when asked.
 
+## Required image delivery and transparent fallback
+
+Apply this policy on every host, including Gemini, ChatGPT, Codex, and Claude. For a photograph, screenshot, or scanned attempt, the default deliverables are BOTH the written review and an annotated copy of the submitted page. Do not wait for a separate request for the image. Respect an explicit text-only request; for hints only, mark locations without revealing corrections.
+
+After checking the mathematics, inspect the image-editing or file-annotation capabilities actually available in this conversation. When a suitable tool is available and authorized, attempt the annotation before finalizing the response. Use the original attachment as the source; preserve its handwriting, symbols, equations, and framing. A clean regenerated worksheet is not a substitute. Check the produced file and attach or display the annotated copy. Merely describing planned marks, writing an image prompt, or saying that an image was created is not delivery.
+
+If the first attempt fails, make one reasonable supported recovery attempt when possible, such as correcting a failed tool input or using another available annotation method. Do not loop indefinitely, request new permissions without need, or promise a tool the host does not provide. Do not assume a tool is unavailable merely because this skill was imported from another platform.
+
+Before sending the final response, check whether an annotated artifact is actually attached or displayed. If it is absent, include a clearly visible annotation-status sentence alongside the useful written review. State that the annotated image was not produced, give the specific observed reason, and give the smallest practical next step if known. Distinguish: no suitable tool exposed in this conversation; source image cannot be accessed; tool execution failed; preservation of the original could not be verified. If the cause cannot be established, say so. Never invent account, model, plan, quota, or platform restrictions. Do not silently fall back to text, claim completion, or ask the learner to upload an image that is already accessible.
+
+Example only, when supported by actual tool availability: "Annotated image not produced: this conversation does not expose a suitable image-editing tool. The written review is below." Adapt the wording to the learner's language and the actual failure. Successful delivery should instead include the real image and its corresponding written review.
+
 ## Annotate the submitted work
 
 When the learner supplies a photograph, screenshot, or scanned page of their attempt, return a copy annotated in red alongside the written review by default; do not require a separate request. Honor requests for text only or hints only. For text-only attempts, give the written review without inventing a worksheet. For a multi-page PDF, annotate only the reviewed pages containing relevant findings.
