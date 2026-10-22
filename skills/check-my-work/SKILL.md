@@ -27,6 +27,8 @@ Respect the requested amount of help. For hints only, identify the relevant line
 
 ## Required image delivery and transparent fallback
 
+Input gate: this image-delivery and annotation-status policy applies ONLY when the learner supplied a photograph, screenshot, or scanned page to review. For an attempt supplied only as text or equations, return the written review normally. Do not add an annotation-status notice, explain why no image was returned, or ask for an image merely to satisfy this policy. An explicit text-only request also requires no missing-image notice.
+
 Apply this policy on every host, including Gemini, ChatGPT, Codex, and Claude. For a photograph, screenshot, or scanned attempt, the default deliverables are BOTH the written review and an annotated copy of the submitted page. Do not wait for a separate request for the image. Respect an explicit text-only request; for hints only, mark locations without revealing corrections.
 
 After checking the mathematics, inspect the image-editing or file-annotation capabilities actually available in this conversation. When a suitable tool is available and authorized, attempt the annotation before finalizing the response. Use the original attachment as the source; preserve its handwriting, symbols, equations, and framing. A clean regenerated worksheet is not a substitute. Check the produced file and attach or display the annotated copy. Merely describing planned marks, writing an image prompt, or saying that an image was created is not delivery.

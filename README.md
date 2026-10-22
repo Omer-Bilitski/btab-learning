@@ -11,7 +11,7 @@ Follow the mathematics, understand the theory, and learn from a complete solutio
 
 **[Get started with your assistant](#quick-start)**
 
-[Automatic skill selection](#one-skill-that-chooses-the-right-help) &nbsp; · &nbsp; [Explore the skills](#four-focused-teaching-modes) &nbsp; · &nbsp; [Download files](https://github.com/Omer-Bilitski/btab-learning/releases/tag/v1.2.5)
+[Automatic skill selection](#one-skill-that-chooses-the-right-help) &nbsp; · &nbsp; [Explore the skills](#four-focused-teaching-modes) &nbsp; · &nbsp; [Download files](https://github.com/Omer-Bilitski/btab-learning/releases/tag/v1.2.6)
 
 </div>
 
@@ -39,13 +39,15 @@ When a question needs both theory and calculations, BTAB Learning combines the r
 | **Check My Work** | Reviews your attempted solution, preserves valid methods and notation, and repairs the first substantive error. | “Check my solution without solving it again from scratch.” |
 | **Solve Then Explain** | Gives a complete written solution, followed by a walkthrough of that same solution. | “Solve this problem, then explain the method.” |
 
+**New in v1.2.6:** Clarifies that image-delivery attempts and missing-image explanations apply only when an image was supplied for review. Text-only attempts receive normal written feedback without an image-status notice.
+
 **New in v1.2.5:** For uploaded work, Check My Work attempts to return an annotated copy alongside its written review by default. If it cannot deliver the image, it must explicitly explain the observed reason; it must not silently return text only. This policy is shared by the standalone skill, unified skill, and plugin on Gemini, ChatGPT, Codex, and Claude. Image output still requires suitable tools in the current conversation; installing a skill does not add those tools.
 
 **New in v1.2.4:** Aligns Check My Work router and standalone persistence rules, reads review version identifiers from the package manifest instead of a stale hard-coded version, and prefers additive, color-independent annotation labels. Full-solution delivery and practice behavior are unchanged.
 
 **New in v1.2.3:** Check My Work now adds red annotations to photographed or scanned attempts alongside written feedback, when image editing is available. It preserves the original handwriting and labels corrections that depend on assumptions. All three v1.2.3 download archives include this update; the linked marketplace follows the published release.
 
-**Only need Check My Work?** [Download the standalone skill](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.5/check-my-work-v1.2.5.zip).
+**Only need Check My Work?** [Download the standalone skill](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.6/check-my-work-v1.2.6.zip).
 
 <!-- linked-distribution:start -->
 ## Updates that follow the approved release
@@ -88,9 +90,9 @@ Choose the download that matches your assistant.
 
 | Your assistant | Download | What is included |
 | :--- | :--- | :--- |
-| **ChatGPT** | [ChatGPT plugin ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.5/btab-learning-v1.2.5.zip) | BTAB Learning plus the four specialized skills |
-| **Gemini** | [Standalone skill ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.5/btab-learning-skill-v1.2.5.zip) | BTAB Learning with all four teaching workflows |
-| **Claude** | [Standalone skill ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.5/btab-learning-skill-v1.2.5.zip) | BTAB Learning with all four teaching workflows |
+| **ChatGPT** | [ChatGPT plugin ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.6/btab-learning-v1.2.6.zip) | BTAB Learning plus the four specialized skills |
+| **Gemini** | [Standalone skill ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.6/btab-learning-skill-v1.2.6.zip) | BTAB Learning with all four teaching workflows |
+| **Claude** | [Standalone skill ZIP](https://github.com/Omer-Bilitski/btab-learning/releases/download/v1.2.6/btab-learning-skill-v1.2.6.zip) | BTAB Learning with all four teaching workflows |
 
 ### ChatGPT
 

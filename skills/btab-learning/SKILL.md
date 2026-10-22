@@ -19,6 +19,8 @@ Do not reveal a complete solution when the user asks for hints, one transition, 
 
 ## Image review output contract
 
+For input supplied only as text or equations, give the written review without any missing-image notice or explanation about image output. The contract below applies only to an image actually supplied for review.
+
 When selecting Check My Work for a photograph, screenshot, or scanned attempt, load its review reference and apply its required image-delivery policy. Default to a written review plus an annotated copy of the original; attempt a suitable available annotation tool before finalizing. If no annotated artifact is delivered, explicitly state that it was not produced and explain the observed reason (or that the reason is unknown). Never silently return text only or invent a host limitation. An explicit text-only or hints-only request takes priority.
 
 ## Read and teach
